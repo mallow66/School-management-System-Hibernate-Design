@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<table>
+    <th:block th:each="adulte : ${adultes}">
+        <tr>
+            <td th:text="${adulte.nom}">...</td>
+            <td th:text="${adulte.prenom}">...</td>
+        </tr>
+        <tr>
+            <td colspan="2" th:text="${adulte.telephone}">...</td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>

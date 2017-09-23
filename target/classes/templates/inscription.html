@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Inscription d'un nouveau Elève </h1>
+<form action="#" th:action="@{/inscription}" th:object="${inscription}" method="post">
+
+    <fieldset>
+        <legend>Information Eleve</legend>
+        <p>
+            <label for="cne">Cne : </label>
+            <input type="text" th:field="*{eleve.cne}" id="cne"/>
+        </p>
+
+        <p>
+            <label for="cin_etudiant">Cin : </label>
+            <input type="text" th:field="*{eleve.cin}" id="cin_etudiant"/>
+        </p>
+        <p>
+            <label for="nom_etudiant">Nom : </label>
+            <input type="text" th:field="*{eleve.nom}" id="nom_etudiant"/>
+        </p>
+
+        <p>
+            <label for="prenom_etudiant">Prenom : </label>
+            <input type="text" th:field="*{eleve.prenom}" id="prenom_etudiant"/>
+        </p>
+
+        <p>
+            <label for="age_etudiant">Age : </label>
+            <input type="text" th:field="*{eleve.age}" id="age_etudiant"/>
+        </p>
+
+        <p>
+            <label for="redoublant">Redoublant : </label>
+            <input type="checkbox" th:field="*{eleve.redoublant}" id="redoublant"/>
+        </p>
+
+        <p>
+            <label for="telephone_etudiant">Telephone : </label>
+            <input type="text" th:field="*{eleve.telephone}" id="telephone_etudiant"/>
+        </p>
+
+        <p>
+            <label for="email_etudiant">Email : </label>
+            <input type="text" th:field="*{eleve.email}" id="email_etudiant"/>
+        </p>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Parent</legend>
+
+        <p>
+            <label for="cin_parent">Cin : </label>
+            <input type="text" th:field="*{eleve.adulte.cin}" id="cin_parent"/>
+        </p>
+        <p>
+            <label for="nom_parent">Nom : </label>
+            <input type="text" th:field="*{eleve.adulte.nom}" id="nom_parent"/>
+        </p>
+
+        <p>
+            <label for="prenom_parent">Prenom : </label>
+            <input type="text" th:field="*{eleve.adulte.prenom}" id="prenom_parent"/>
+        </p>
+
+        <p>
+            <label for="age_parent">Age : </label>
+            <input type="text" th:field="*{eleve.adulte.age}" id="age_parent"/>
+        </p>
+
+
+
+        <p>
+            <label for="telephone_parent">Telephone : </label>
+            <input type="text" th:field="*{eleve.adulte.telephone}" id="telephone_parent"/>
+        </p>
+
+        <p>
+            <label for="email_parent">Email : </label>
+            <input type="text" th:field="*{eleve.adulte.email}" id="email_parent"/>
+
+        </p>
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Inscription</legend>
+        <p>
+            <label for="montant_verse">Montant Versé : </label>
+            <input type="number" step="0.01" th:field="*{montantVerse}" id="montant_verse"/>
+
+        </p>
+
+        <p>
+            <label for="montant_scolarite">Montant Scolarite : </label>
+            <input type="number" step="0.01" th:field="*{montantScolarite}" id="montant_scolarite"/>
+        </p>
+    </fieldset>
+
+
+    <input type="submit" th:value="Inscription"/>
+</form>
+</body>
+</html>

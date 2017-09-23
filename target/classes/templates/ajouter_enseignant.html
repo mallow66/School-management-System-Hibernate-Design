@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter Un nouveau enseignant</title>
+
+</head>
+<body>
+
+    <form th:object="enseignant" th:action="@{/ajouter_enseignant}" method="post">
+        <input th:field="*{cin}" placeholder="CIN de l'enseignant">
+        <input th:field="*{nom}" placeholder="Nom de l'enseignant">
+        <input th:field="*{prenom}" placeholder="Prénom de l'enseignant">
+        <input th:field="*{age}" placeholder="Age de l'enseignant">
+        <input th:field="*{email}" placeholder="Email de l'enseignant">
+        <input th:field="*{motDePasse}" placeholder="Nom de l'enseignant">
+        <input th:field="*{salaire}" placeholder="Salaire en DHS de l'enseignant">
+
+    </form>
+
+</body>
+</html>
